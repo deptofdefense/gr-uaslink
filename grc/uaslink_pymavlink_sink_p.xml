@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<block>
+  <name>pymavlink_sink_p</name>
+  <key>uaslink_pymavlink_sink_p</key>
+  <category>[uaslink]</category>
+  <import>import uaslink</import>
+  <make>uaslink.pymavlink_sink_p($connection_string, $baud_rate)</make>
+  
+  <param>
+    <name>Baud Rate</name>
+    <key>baud_rate</key>
+    <value>57600</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Connection String</name>
+    <key>connection_string</key>
+    <type>string</type>
+  </param>
+
+ 
+  <sink>
+    <name>MAVLink</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+</block>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<block>
+  <name>burst_verification</name>
+  <key>uaslink_burst_verification</key>
+  <category>[uaslink]</category>
+  <import>import uaslink</import>
+  <make>uaslink.burst_verification()</make>
+ <sink>
+    <name>PDU_IN</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <source>
+    <name>Control_OUT</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

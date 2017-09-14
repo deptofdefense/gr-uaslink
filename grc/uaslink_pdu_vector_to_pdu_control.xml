@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<block>
+  <name>pdu_vector_to_pdu_control</name>
+  <key>uaslink_pdu_vector_to_pdu_control</key>
+  <category>[uaslink]</category>
+  <import>import uaslink</import>
+  <make>uaslink.pdu_vector_to_pdu_control()</make>
+  <sink>
+    <name>Vector_IN</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <source>
+    <name>Control_OUT</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

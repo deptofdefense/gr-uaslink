@@ -1,0 +1,1 @@
+This is a GNU Radio OOT module designed to provide a basic link between MAVLink control of UAS systems and GNU Radio.   It is a good example of interaacing GNU Radio to outside systems.  The apps directory contains a number of examples. 

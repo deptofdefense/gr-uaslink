@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<block>
+  <name>mavlink_control</name>
+  <key>uaslink_mavlink_control</key>
+  <category>[uaslink]</category>
+  <import>import uaslink</import>
+  <make>uaslink.mavlink_control($connection_string, $baud_rate)</make>
+   <param>
+    <name>Connection String</name>
+    <key>connection_string</key>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Baud Rate</name>
+    <key>baud_rate</key>
+    <value>57600</value>
+    <type>int</type>
+  </param>
+   <sink>
+    <name>MAVLink_IN</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <sink>
+    <name>Command</name>
+    <type>message</type>
+    <optional>1</optional>
+  </sink>
+  <source>
+    <name>MAVLink_OUT</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>
