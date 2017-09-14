@@ -18,7 +18,6 @@
 # Boston, MA 02110-1301, USA.
 # 
 #Import DroneKit-Python
-from dronekit import connect, VehicleMode, LocationGlobal, LocationGlobalRelative
 from pymavlink import mavutil # Needed for command message definitions
 import time
 import math
@@ -57,7 +56,6 @@ class control_gui(gr.top_block, Qt.QWidget):
         gr.top_block.__init__(self, "Control Gui")
         Qt.QWidget.__init__(self)
         self.setWindowTitle("Control Gui")
-        qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
         except:
@@ -424,8 +422,7 @@ def main(top_block_cls=control_gui, options=None):
     #print("Connecting to vehicle on: %s" % (connection_string,))
     #vehicle = connect(connection_string, wait_ready=True)
     def quitting():
-        self.running=False
-        self.tb.thread.close()
+        tb.running=False
         tb.stop()
         tb.wait()
     qapp.connect(qapp, Qt.SIGNAL("aboutToQuit()"), quitting)
