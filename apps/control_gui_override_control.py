@@ -186,8 +186,8 @@ class control_gui(gr.top_block, Qt.QWidget):
         self._overridevalue2_line_edit.returnPressed.connect(
         	lambda: self.set_overridevalue2(eng_notation.str_to_num(str(self._overridevalue2_line_edit.text().toAscii()))))
         self.top_grid_layout.addWidget(self._overridevalue2_tool_bar, 4,2,1,1)
-        self._mode_options = ('STABILIZE', 'ALT_HOLD', )
-        self._mode_labels = (str(self._mode_options[0]), str(self._mode_options[1]), )
+        self._mode_options = ('STABILIZE', 'ALT_HOLD','LOITER', )
+        self._mode_labels = (str(self._mode_options[0]), str(self._mode_options[1]),str(self._mode_options[2]),  )
         self._mode_tool_bar = Qt.QToolBar(self)
         self._mode_tool_bar.addWidget(Qt.QLabel('Mode'+": "))
         self._mode_combo_box = Qt.QComboBox()
@@ -250,6 +250,8 @@ class control_gui(gr.top_block, Qt.QWidget):
                self.data[7]=0
            elif (self.mode == 'ALT_HOLD'):
                self.data[7]=1
+           elif (self.mode == 'LOITER'):
+               self.data[7]=2
            pmtdata = pmt.to_pmt(self.data)
            msg=pmt.cons(meta, pmtdata)
            print('send_zmq')

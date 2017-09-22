@@ -122,6 +122,8 @@ class mavlink_control(gr.sync_block):
           self.mavlink2.set_mode('STABILIZE')
         elif(data[7]==1):
           self.mavlink2.set_mode('ALT_HOLD')
+        elif(data[7]==2):
+          self.mavlink2.set_mode('LOITER')
         time.sleep(0.5)
         print('first set')
         
