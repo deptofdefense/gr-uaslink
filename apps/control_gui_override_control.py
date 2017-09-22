@@ -89,10 +89,10 @@ class control_gui(gr.top_block, Qt.QWidget):
         self.forward = forward = 0
         self.down = down = 0
         self.back = back = 0
-        self.speed = speed = 100
+        self.speed = speed = 150
         self.overridevalue0 = 1500
         self.overridevalue1 = 1500
-        self.overridevalue2 = 1450
+        self.overridevalue2 = 1500
         self.data=[0]*8
         self.data[0]=self.overridevalue0
         self.data[1]=self.overridevalue1
