@@ -1,1 +1,4 @@
 This is a GNU Radio OOT module designed to provide a basic link between MAVLink control of UAS systems and GNU Radio.   It is a good example of interacting GNU Radio to outside systems.  The apps directory contains a number of examples. 
+
+For detailed Installation process please see
+https://darpahackfest.com/wp-content/uploads/2017/09/grcon_hackfest_workshop_v2.pdf
